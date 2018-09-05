@@ -12,7 +12,7 @@ class FeedUsername(Feeder):
             'USER_DB_DATABASE': os.getenv('USER_DB_DATABASE', 'postgres'),
             'USER_DB_USER': os.getenv('USER_DB_USER', 'postgres'),
             'USER_DB_PASSWORD': os.getenv('USER_DB_PASSWORD', ''),
-            'USER_DB_PORT': os.getenv('USER_DB_PORT', ''),
+            'USER_DB_PORT': int(os.getenv('USER_DB_PORT', 5432)),
         }
         try:
             conn = psycopg2.connect("""
