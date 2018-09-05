@@ -11,7 +11,7 @@ class FeedTaskname(Feeder):
             'host': os.getenv('TASK_DB_HOST', 'taskdb'),
             'port': int(os.getenv('TASK_DB_PORT', 7687)),
             'user': os.getenv('TASK_DB_USER', 'neo4j'),
-            'password': os.getenv('TASK_DB_USER', 'neo4jpass'),
+            'password': os.getenv('TASK_DB_PASSWORD', 'neo4jpass'),
             'scheme': os.getenv('TASK_DB_SCHEME', 'bolt')
         }
         try:
